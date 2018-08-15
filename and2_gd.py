@@ -37,8 +37,8 @@ train = tf.train.GradientDescentOptimizer(0.02).minimize(mse)
 # error   : 4x1 tensor
 # we have to transpose train_in (4x3 -> 3x4)
 # weight change is done with tf.assign
-delta = tf.matmul(train_in, error, transpose_a = True)
-train = tf.assign(w, tf.add(w,delta))
+# delta = tf.matmul(train_in, error, transpose_a = True)
+# train = tf.assign(w, tf.add(w,delta))
 
 # 9: tensorflow session
 sess = tf.Session()
